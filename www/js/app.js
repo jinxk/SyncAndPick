@@ -1,1 +1,1 @@
-var app = angular.module('syncNpick', []);
+var app = angular.module('contactsSync', []);

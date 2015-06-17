@@ -2,21 +2,23 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../node_modules/angular-material/angular-material.min.css"/>
+
     </head>
-    <body ng-app="syncNpick">
-    <div ng-controller="SyncController">
+    <body ng-app="contactsSync">
+    <div ng-controller="MainController">
         <div ng-repeat="contact in contacts">
-            <p>{{con.name}}</p>
-            <!--<p> {{con.mobile}} </p>-->
+            <!--<p> {{contact.name.givenName}} </p>-->
+            <p>{{contact}}</p>
+            <!--<p> {{contact.name.familyName}} </p>-->
         </div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="../node_modules/angular.min.js"></script>
+    <script type="text/javascript" src="js/libraries/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/SyncController.js"></script>
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
     </body>
 
 </html>
+
 
