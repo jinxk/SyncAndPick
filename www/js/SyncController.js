@@ -1,8 +1,6 @@
-app.controller('SyncController', ['$scope',
-    function($scope){
+app.controller('SyncController', ['$scope', function($scope){
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        $scope.contacts=[];
 
         function onSuccess(contacts) {
             $scope.contacts=contacts;
@@ -13,11 +11,10 @@ app.controller('SyncController', ['$scope',
         };
 
         function onDeviceReady() {
-            var options = new ContactFindOptions();
-            options.filter = "";
-            options.multiple=true;
-            var fields = ["displayName", "name"];
-
+            var options      = new ContactFindOptions();
+            options.filter   = "";
+            options.multiple = true;
+            var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
             navigator.contacts.find(fields, onSuccess, onError, options);
         }
 

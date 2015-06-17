@@ -11,10 +11,10 @@
     <allow-intent href="market:*" />
     <name>SyncAndPick</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple contacts app created using Cordova
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author>
+        jinx3d
     </author>
     <content src="index.html" />
     <access origin="*" />
