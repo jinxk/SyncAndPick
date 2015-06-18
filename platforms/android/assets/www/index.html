@@ -6,10 +6,11 @@
     </head>
     <body ng-app="contactsSync">
     <div ng-controller="MainController">
-
-        <div ng-repeat="contact in allContacts">
-            <p> Name : {{contact.displayName}} </p>
-            <p> Numbers : {{contact.phoneNumbers}} </p>
+        <div ng-show="allContacts.length > 0">
+            <div ng-repeat="contact in allContacts">
+                <p> Name : {{contact.displayName}} </p>
+                <p> Numbers : {{contact.phoneNumbers}} </p>
+            </div>
         </div>
     </div>
 

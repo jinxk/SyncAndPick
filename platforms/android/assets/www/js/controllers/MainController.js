@@ -15,7 +15,8 @@ app.controller('MainController', ['$scope', function($scope){
         function onSuccess(contacts) {
             //TODO : This doesn't work yet - the alert is working, but the contacts are not displayed. Investigate.
             $scope.allContacts=contacts;
-            alert("Mission Successful "+ $scope.allContacts[0].displayName);
+            $scope.$apply();
+            //alert("Mission Successful "+ $scope.allContacts[0].displayName);
 
         };
 
@@ -23,10 +24,9 @@ app.controller('MainController', ['$scope', function($scope){
             alert('onError!');
         };
 
+
+
     };
-
-
-
 
 }
 ]);
