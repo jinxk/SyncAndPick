@@ -1,1 +1,1 @@
-var app = angular.module('contactsSync', []);
+var app = angular.module('contactsSync', [ 'ngMaterial' ]);

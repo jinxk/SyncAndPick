@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="contactsSync">
     <head>
-
+        <link rel="stylesheet" href="css/angular-material.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     </head>
-    <body ng-app="contactsSync">
+    <body>
     <div ng-controller="MainController">
         <div ng-show="allContacts.length > 0">
             <div ng-repeat="contact in allContacts">
-                <p> Name : {{contact.displayName}} </p>
-                <p> Numbers : {{contact.phoneNumbers}} </p>
+                <md-list-item class="md-2-line">
+                    <div class="md-list-item-text">
+                        <h3>{{ contact.displayName }}</h3>
+                        <p> {{contact.phoneNumbers[0].value}}</p>
+                    </div>
+                </md-list-item>
+                <md-divider ></md-divider>
             </div>
         </div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/libraries/angular.min.js"></script>
+    <script type="text/javascript" src="js/libraries/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/libraries/angular-aria.min.js"></script>
+    <script type="text/javascript" src="js/libraries/angular-material.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers/MainController.js"></script>
     </body>
